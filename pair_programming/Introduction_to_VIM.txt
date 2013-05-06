@@ -1,0 +1,510 @@
+Last login: Sun May  5 15:41:29 on ttys000
+Chaes-MacBook-Pro:~ chae$ ls
+Desktop				Pictures
+Dev				Public
+Documents			RailsGirlsProjects
+Downloads			RailsGirlsProjects_TDList
+Koans				bin
+LRTHW				cert_file
+Library				doc
+Movies				rails_projects
+Music				rvm-installer
+Chaes-MacBook-Pro:~ chae$ cd dev
+Chaes-MacBook-Pro:dev chae$ ls
+Beginning_Ruby			Think
+CompletedStudyMaterials.md	blog
+HTML-CSS			go.txt
+Hartl				koans
+Javascript			learn_ruby
+Rails				noproblems
+Ruby-CodeSchool			scratch.rb
+RubyLearning			scratch2.rb
+SQL
+Chaes-MacBook-Pro:dev chae$ cd rubylearning
+Chaes-MacBook-Pro:rubylearning chae$ ls
+A.txt
+B.txt
+C.txt
+QuizWeek 1.pdf
+QuizWeek 2.pdf
+QuizWeek 3.pdf
+QuizWeek 4.pdf
+W1E1.rb
+W1E2.rb
+W1E3.rb
+W1E4.rb
+W1E5.rb
+W1E6.rb
+W2C2.rb
+W2C3.rb
+W2E1.rb
+W2E2.rb
+W2E3.rb
+W2E4.rb
+W2E5.rb
+W3E1.rb
+W3E10.rb
+W3E11.rb
+W3E2.rb
+W3E2_text.txt
+W3E3.rb
+W3E4
+W3E4.rb
+W3E5.rb
+W3E6 copy.rb
+W3E6.rb
+W3E7.rb
+W3E8.rb
+W3E9.rb
+W4C1.rb
+W4E1.rb
+W4E2.rb
+W4E3.rb
+W4E4.rb
+W4_HTTP2.jpg
+W4_PORPC101-41C_ _PARALLEL TRACK_ Understand HTTP concepts.pdf
+W4_Playfair_Instructions.pdf
+analyzer.rb
+p001hello.rb
+ruby_formatting.pdf
+scratch.rb
+text.txt
+tmp.rb
+Chaes-MacBook-Pro:rubylearning chae$ mkdir pair_programming
+Chaes-MacBook-Pro:rubylearning chae$ ls
+A.txt
+B.txt
+C.txt
+QuizWeek 1.pdf
+QuizWeek 2.pdf
+QuizWeek 3.pdf
+QuizWeek 4.pdf
+W1E1.rb
+W1E2.rb
+W1E3.rb
+W1E4.rb
+W1E5.rb
+W1E6.rb
+W2C2.rb
+W2C3.rb
+W2E1.rb
+W2E2.rb
+W2E3.rb
+W2E4.rb
+W2E5.rb
+W3E1.rb
+W3E10.rb
+W3E11.rb
+W3E2.rb
+W3E2_text.txt
+W3E3.rb
+W3E4
+W3E4.rb
+W3E5.rb
+W3E6 copy.rb
+W3E6.rb
+W3E7.rb
+W3E8.rb
+W3E9.rb
+W4C1.rb
+W4E1.rb
+W4E2.rb
+W4E3.rb
+W4E4.rb
+W4_HTTP2.jpg
+W4_PORPC101-41C_ _PARALLEL TRACK_ Understand HTTP concepts.pdf
+W4_Playfair_Instructions.pdf
+analyzer.rb
+p001hello.rb
+pair_programming
+ruby_formatting.pdf
+scratch.rb
+text.txt
+tmp.rb
+Chaes-MacBook-Pro:rubylearning chae$ cd pair_programming
+Chaes-MacBook-Pro:pair_programming chae$ ls
+Chaes-MacBook-Pro:pair_programming chae$ touch hello.rb
+Chaes-MacBook-Pro:pair_programming chae$ rvm use 1.9.3@RubyLearning
+Gemset 'RubyLearning' does not exist, 'rvm gemset create RubyLearning' first, or append '--create'.
+Chaes-MacBook-Pro:pair_programming chae$ cd ..
+Chaes-MacBook-Pro:rubylearning chae$ cd ..
+Chaes-MacBook-Pro:dev chae$ ls
+Beginning_Ruby			Think
+CompletedStudyMaterials.md	blog
+HTML-CSS			go.txt
+Hartl				koans
+Javascript			learn_ruby
+Rails				noproblems
+Ruby-CodeSchool			scratch.rb
+RubyLearning			scratch2.rb
+SQL
+Chaes-MacBook-Pro:dev chae$ cd rubylearning
+Chaes-MacBook-Pro:rubylearning chae$ ls
+A.txt
+B.txt
+C.txt
+QuizWeek 1.pdf
+QuizWeek 2.pdf
+QuizWeek 3.pdf
+QuizWeek 4.pdf
+W1E1.rb
+W1E2.rb
+W1E3.rb
+W1E4.rb
+W1E5.rb
+W1E6.rb
+W2C2.rb
+W2C3.rb
+W2E1.rb
+W2E2.rb
+W2E3.rb
+W2E4.rb
+W2E5.rb
+W3E1.rb
+W3E10.rb
+W3E11.rb
+W3E2.rb
+W3E2_text.txt
+W3E3.rb
+W3E4
+W3E4.rb
+W3E5.rb
+W3E6 copy.rb
+W3E6.rb
+W3E7.rb
+W3E8.rb
+W3E9.rb
+W4C1.rb
+W4E1.rb
+W4E2.rb
+W4E3.rb
+W4E4.rb
+W4_HTTP2.jpg
+W4_PORPC101-41C_ _PARALLEL TRACK_ Understand HTTP concepts.pdf
+W4_Playfair_Instructions.pdf
+analyzer.rb
+p001hello.rb
+pair_programming
+ruby_formatting.pdf
+scratch.rb
+text.txt
+tmp.rb
+Chaes-MacBook-Pro:rubylearning chae$ cd pair_programming
+Chaes-MacBook-Pro:pair_programming chae$ echo "rvm use 1.9.3@RubyLearning" > .rvmrc
+Chaes-MacBook-Pro:pair_programming chae$ cd .
+You are using '.rvmrc', it requires trusting, it is slower and it is not compatible with other ruby managers,
+you can switch to '.ruby-version' using 'rvm rvmrc to [.]ruby-version'
+or ignore this warnings with 'rvm rvmrc warning ignore /Users/chae/dev/rubylearning/pair_programming/.rvmrc',
+'.rvmrc' will continue to be the default project file in RVM 1 and RVM 2,
+to ignore the warning for all files run 'rvm rvmrc warning ignore all.rvmrcs'.
+
+**************************************************************************
+* NOTICE                                                                 *
+**************************************************************************
+* RVM has encountered a new or modified .rvmrc file in the current       *
+* directory, this is a shell script and therefore may contain any shell  *
+* commands.                                                              *
+*                                                                        *
+* Examine the contents of this file carefully to be sure the contents    *
+* are safe before trusting it!                                           *
+* Do you wish to trust                                                   *
+* '/Users/chae/dev/rubylearning/pair_programming/.rvmrc'?                *
+* Choose v[iew] below to view the contents                               *
+**************************************************************************
+y[es], n[o], v[iew], c[ancel]> y
+Gemset 'RubyLearning' does not exist, 'rvm gemset create RubyLearning' first, or append '--create'.
+Chaes-MacBook-Pro:pair_programming chae$ rvm gemset create RubyLearning
+gemset created RubyLearning	=> /usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning
+Chaes-MacBook-Pro:pair_programming chae$ cd .
+You are using '.rvmrc', it requires trusting, it is slower and it is not compatible with other ruby managers,
+you can switch to '.ruby-version' using 'rvm rvmrc to [.]ruby-version'
+or ignore this warnings with 'rvm rvmrc warning ignore /Users/chae/dev/rubylearning/pair_programming/.rvmrc',
+'.rvmrc' will continue to be the default project file in RVM 1 and RVM 2,
+to ignore the warning for all files run 'rvm rvmrc warning ignore all.rvmrcs'.
+
+Using /usr/local/rvm/gems/ruby-1.9.3-p392 with gemset RubyLearning
+Chaes-MacBook-Pro:pair_programming chae$ gem list
+
+*** LOCAL GEMS ***
+
+bundler (1.3.5, 1.2.4)
+rake (10.0.4, 10.0.3)
+rubygems-bundler (1.1.1, 1.1.0)
+rvm (1.11.3.7, 1.11.3.6)
+Chaes-MacBook-Pro:pair_programming chae$ gem install rubydoctest
+Fetching: rubydoctest-1.1.3.gem (100%)
+
+rubydoctest comes as an executable that takes a list of files:
+	
+	rubydoctest lib/*.rb
+	rubydoctest simple.doctest
+
+
+Successfully installed rubydoctest-1.1.3
+1 gem installed
+Chaes-MacBook-Pro:pair_programming chae$ irb --simple-prompt
+>> "Hello World" 1 + 2
+SyntaxError: (irb):1: syntax error, unexpected tINTEGER, expecting $end
+"Hello World" 1 + 2
+               ^
+	from /usr/local/rvm/rubies/ruby-1.9.3-p392/bin/irb:16:in `<main>'
+>> "Hello World"
+=> "Hello World"
+>> 1+2
+=> 3
+>> exit
+Chaes-MacBook-Pro:pair_programming chae$ vi hello.rb
+
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.   OK  | Default Test
+2 comparisons, 1 doctests, 0 failures, 0 errors
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/lib/code_block.rb:56:in `actual_result': undefined method `actual_result' for nil:NilClass (NoMethodError)
+	from /usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/lib/runner.rb:138:in `block in run'
+	from /usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/lib/runner.rb:124:in `each'
+	from /usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/lib/runner.rb:124:in `each_with_index'
+	from /usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/lib/runner.rb:124:in `run'
+	from -e:8:in `<main>'
+
+shell returned 1
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.   OK  | this is a test
+2 comparisons, 1 doctests, 0 failures, 0 errors
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.  ERR  | I have a method named hello
+           NameError: undefined local variable or method `hello' for main:Object
+             from hello.rb:3
+           hello
+1 comparisons, 1 doctests, 0 failures, 1 errors
+
+shell returned 1
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.  FAIL | I have a method named hello
+           Got:      nil
+           Expected: "Hello World"
+             from hello.rb:4
+1 comparisons, 1 doctests, 1 failures, 0 errors
+
+shell returned 1
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.   OK  | I have a method named hello
+1 comparisons, 1 doctests, 0 failures, 0 errors
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.   OK  | I have a method named hello
+2.  ERR  | I can greet someone by name
+           ArgumentError: wrong number of arguments (1 for 0)
+             from hello.rb:6
+           hello 'Chae'
+2 comparisons, 2 doctests, 0 failures, 1 errors
+
+shell returned 1
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.   OK  | I have a method named hello
+2.  ERR  | I can greet someone by name
+           ArgumentError: wrong number of arguments (1 for 0)
+             from hello.rb:6
+           hello 'Chae'
+2 comparisons, 2 doctests, 0 failures, 1 errors
+
+shell returned 1
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.  ERR  | I have a method named hello
+           ArgumentError: wrong number of arguments (0 for 1)
+             from hello.rb:3
+           hello
+2.  FAIL | I can greet someone by name
+           Got:      "Hello World!"
+           Expected: "Hello Chae!"
+             from hello.rb:7
+2 comparisons, 2 doctests, 1 failures, 1 errors
+
+shell returned 1
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.  ERR  | I have a method named hello
+           ArgumentError: wrong number of arguments (0 for 1)
+             from hello.rb:3
+           hello
+2.   OK  | I can greet someone by name
+2 comparisons, 2 doctests, 0 failures, 1 errors
+
+shell returned 1
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.  ERR  | I have a method named hello
+           ArgumentError: wrong number of arguments (0 for 1)
+             from hello.rb:3
+           hello
+2.   OK  | I can greet someone by name
+2 comparisons, 2 doctests, 0 failures, 1 errors
+
+shell returned 1
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.  ERR  | I have a method named hello
+           ArgumentError: wrong number of arguments (0 for 1)
+             from hello.rb:3
+           hello
+2.   OK  | I can greet someone by name
+2 comparisons, 2 doctests, 0 failures, 1 errors
+
+shell returned 1
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.  FAIL | I have a method named hello
+           Got:      "Hello World!!"
+           Expected: "Hello World!"
+             from hello.rb:4
+2.   OK  | I can greet someone by name
+2 comparisons, 2 doctests, 1 failures, 0 errors
+
+shell returned 1
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.   OK  | I have a method named hello
+2.   OK  | I can greet someone by name
+2 comparisons, 2 doctests, 0 failures, 0 errors
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.   OK  | I have a method named hello
+2.   OK  | I can greet someone by name
+3.  ERR  | I can ask if someone is there
+           ArgumentError: wrong number of arguments (2 for 1)
+             from hello.rb:9
+           hello("Tanya", "?")
+3 comparisons, 3 doctests, 0 failures, 1 errors
+
+shell returned 1
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.  ERR  | I have a method named hello
+           ArgumentError: wrong number of arguments (0 for 1)
+             from hello.rb:3
+           hello
+2.  FAIL | I can greet someone by name
+           Got:      "Hello World!"
+           Expected: "Hello Chae!"
+             from hello.rb:7
+3.  FAIL | I can ask if someone is there
+           Got:      "Hello Tanya!"
+           Expected: "Hello Tanya?"
+             from hello.rb:10
+3 comparisons, 3 doctests, 2 failures, 1 errors
+
+shell returned 1
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.  ERR  | I have a method named hello
+           ArgumentError: wrong number of arguments (0 for 1)
+             from hello.rb:3
+           hello
+2.  FAIL | I can greet someone by name
+           Got:      "Hello World?"
+           Expected: "Hello Chae!"
+             from hello.rb:7
+3.   OK  | I can ask if someone is there
+3 comparisons, 3 doctests, 1 failures, 1 errors
+
+shell returned 1
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.  ERR  | I have a method named hello
+           ArgumentError: wrong number of arguments (0 for 1)
+             from hello.rb:3
+           hello
+2.  FAIL | I can greet someone by name
+           Got:      "Hello WorldChae"
+           Expected: "Hello Chae!"
+             from hello.rb:7
+3.   OK  | I can ask if someone is there
+3 comparisons, 3 doctests, 1 failures, 1 errors
+
+shell returned 1
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.  ERR  | I have a method named hello
+           ArgumentError: wrong number of arguments (0 for 1)
+             from hello.rb:3
+           hello
+2.  FAIL | I can greet someone by name
+           Got:      "Hello WorldChae"
+           Expected: "Hello Chae!"
+             from hello.rb:7
+3.   OK  | I can ask if someone is there
+3 comparisons, 3 doctests, 1 failures, 1 errors
+
+shell returned 1
+
+Press ENTER or type command to continue
+/usr/local/rvm/gems/ruby-1.9.3-p392@RubyLearning/gems/rubydoctest-1.1.3/bin/rubydoctest:4: Use RbConfig instead of obsolete and deprecated Config.
+=== Testing 'hello.rb'...
+1.   OK  | I have a method named hello
+2.   OK  | I can greet someone by name
+3.   OK  | I can ask if someone is there
+3 comparisons, 3 doctests, 0 failures, 0 errors
+
+Press ENTER or type command to continue
+  1 =begin
+  2 doctest: I have a method named hello
+  3 >> hello
+  4 => "Hello World!"
+  5 doctest: I can greet someone by name
+  6 >> hello 'Chae'
+  7 => "Hello Chae!"
+  8 doctest: I can ask if someone is there
+  9 >> hello("Tanya", "?")
+ 10 => "Hello Tanya?"
+ 11 =end
+ 12 def hello(name='World', punctuation='!' )
+ 13   "Hello #{name}#{punctuation}"
+ 14 end
+~                                                                         
+~                                                                         
+~                                                                         
+~                                                                         
+ 
