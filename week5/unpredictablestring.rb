@@ -1,9 +1,8 @@
 class UnpredictableString < String
 
   attr_writer :string
-  def initialize
-  	puts "Please type in a sentence:"
-    @string = gets.chomp
+  def initialize(sentence)
+    @string = sentence
   end
   
   def scramble
@@ -12,5 +11,5 @@ class UnpredictableString < String
   
 end
 
-sentence = UnpredictableString.new
+sentence = UnpredictableString.new(gets.chomp)
 puts sentence.scramble
