@@ -43,7 +43,6 @@ class ShapeBaseClass
 		self.play_sound_file
 		self.rotate
 	end
-
 end
 
 class Square < ShapeBaseClass
