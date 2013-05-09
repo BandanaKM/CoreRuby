@@ -12,34 +12,36 @@ Note: This exercise is about inheritance, method overriding and method overloadi
 # rotation: x' = [cos(angle) - sin(angle)] * x
 #						y' = [sin(angle) - cos(angle)] * y
 
-
 class ShapeBaseClass
 	attr_accessor :x, :y, :rotate
 
-	def initialize(origin_x, origin_y, rotate, sound_file)
+	def initialize(origin_x, origin_y, rotate_degrees, sound_file)
 		@x = origin_x.to_i
 		@y = origin_y.to_i
-		@rotate = rotate
+		@rotate = degrees_to_radians(rotate_degrees)
 
 		@sound_file = sound_file
+	end
+
+	def degrees_to_radians(degrees)
+		(degrees.quo(180)*(Math::PI)).round(4)
+	end
+
+	def rotate # math - code executed as local methods returns correct results, but not inside class
+		cos = (Math.cos(@rotate)).round(4)
+		sin = (Math.sin(@rotate)).round(4)
+		
+		@x = (@x*cos) - (@y*sin)
+		@y = (@y*cos) + (@x*sin)
+	end
+
+	def play_sound_file
+		@sound_file.play #or other code to execute sound - play requires gem 'win32'
 	end
 
 	def on_click
 		self.play_sound_file
 		self.rotate
-	end
-
-	def rotate # math issues here - rotate 90/180 same result, 270/380/0 same result
-		radians = (@rotate * Math::PI.quo(180)).round(4)
-		cos = (Math.cos(radians)).round(4)
-		sin = (Math.sin(radians)).round(4)
-		
-		@x = (@x*cos) - (@x*sin)
-		@y = (@y*sin) - (@y*cos)
-	end
-
-	def play_sound_file
-		@sound_file.play
 	end
 end
 
@@ -52,14 +54,14 @@ end
 class Triangle < ShapeBaseClass
 end
 
-test = ShapeBaseClass.new(0, 0, "soundfile")
+test = ShapeBaseClass.new(0, 0, 360, "soundfile")
 test.rotate
 test.play_sound_file
 test.on_click
 
-square = Square.new(0, 0, "./square.aiff")
+square = Square.new(1, 1, 360, "./square.aiff")
 square.on_click
-circle = Circle.new(0, 5, "./circle.aiff")
+circle = Circle.new(5, 5, 360, "./circle.aiff")
 circle.on_click
-triangle = Triangle.new(0, 10, "./triangle.aiff")
+triangle = Triangle.new(0, 10, 360, "./triangle.aiff")
 triangle.on_click
