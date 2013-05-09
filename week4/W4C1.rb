@@ -7,35 +7,20 @@ d = Dog.new('Leo')
 =end
 
 class Dog
-	attr_accessor :name
+	attr_accessor :name, :tricks
 
 	def initialize(name)
       @name = name 
+      @tricks = {}
 	end
   
-  def teach_trick(sym)
-    sym = yield
+  def teach_trick(sym, &block)
+    @tricks[sym] = block.call
   end
   
   def method_missing(instance_id)
       "#{@name} doesn't know how to #{instance_id}!"
   end
-    
-    
-#    define_method(method_name) do
-#      instance_variable_get("@#{method_name}")
-#    end
-    
-#    define_method("#{name}=") do 
-#      instance_variable_set("@#{name}", *args)
-#    end
-#  end
-  
-#  def method_missing(method_id, *args, &block)
-#  	attr_accessor method_id = block
-#   self.instance_eval {method_id} 
-#  end
- 
 end
 
 d = Dog.new('Leo')
