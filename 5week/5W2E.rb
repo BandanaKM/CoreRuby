@@ -12,29 +12,37 @@ Note: This exercise is about inheritance, method overriding and method overloadi
 # rotation: x' = [cos(angle) - sin(angle)] * x
 #						y' = [sin(angle) - cos(angle)] * y
 
+
+module PlaySound
+	def play_sound_file(sound_file)
+			"#{self.class} is playing #{sound_file}"
+	end
+end
+
+module Rotate
+	def rotate_shape(rotation)
+		"#{self.class} is rotating #{rotation}"
+	end
+
+end
+
 class Shape
 	attr_accessor :x, :y, :rotate
+
+	include PlaySound
+	include Rotate
 
 	def initialize(origin_x, origin_y, rotate, sound_file)
 		@x = origin_x.to_i
 		@y = origin_y.to_i
 		@rotate = rotate.to_i
-		@sound_file = sound_file
+		@sound_file = sound_file.to_s
 	end
 
 	def on_click
-		puts "#{rotate_shape}"
-		puts "#{play_sound_file}"
+		puts "#{rotate_shape(@rotate)}"
+		puts "#{play_sound_file(@sound_file)}"
 	end
-
-	def rotate_shape
-		"#{self.class} is rotating #{@rotate}"
-	end
-
-	def play_sound_file
-		"#{self.class} is playing #{@sound_file}"
-	end
-
 end
 
 class Square < Shape
