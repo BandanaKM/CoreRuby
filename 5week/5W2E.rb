@@ -8,56 +8,43 @@ Note: This exercise is about inheritance, method overriding and method overloadi
 # The shapes: square circle and triangle
 # Each shape has a sound file associate with it
 # Methods: click shape => shape rotates and sound file plays
-# Inheritance: define one shape at a time, require/super the class above
+# Inheritance: define one shape at a time, inherit/super the class above
 # rotation: x' = [cos(angle) - sin(angle)] * x
 #						y' = [sin(angle) - cos(angle)] * y
 
-class ShapeBaseClass
+class Shape
 	attr_accessor :x, :y, :rotate
 
-	def initialize(origin_x, origin_y, rotate_degrees, sound_file)
+	def initialize(origin_x, origin_y, rotate, sound_file)
 		@x = origin_x.to_i
 		@y = origin_y.to_i
-		@rotate = degrees_to_radians(rotate_degrees)
-
+		@rotate = rotate.to_i
 		@sound_file = sound_file
 	end
 
-	def degrees_to_radians(degrees)
-		(degrees.quo(180)*(Math::PI)).round(4)
+	def on_click
+		puts "#{rotate_shape}"
+		puts "#{play_sound_file}"
 	end
 
-	def rotate # math - code executed as local methods returns correct results, but not inside class
-		cos = (Math.cos(@rotate)).round(4)
-		sin = (Math.sin(@rotate)).round(4)
-		
-		@x = (@x*cos) - (@y*sin)
-		@y = (@y*cos) + (@x*sin)
+	def rotate_shape
+		"#{self.class} is rotating #{@rotate}"
 	end
 
 	def play_sound_file
-		@sound_file.play #or other code to execute sound - play requires gem 'win32'
+		"#{self.class} is playing #{@sound_file}"
 	end
 
-	def on_click
-		self.play_sound_file
-		self.rotate
-	end
 end
 
-class Square < ShapeBaseClass
+class Square < Shape
 end
 
-class Circle < ShapeBaseClass
+class Circle < Shape
 end
 
-class Triangle < ShapeBaseClass
+class Triangle < Shape
 end
-
-test = ShapeBaseClass.new(0, 0, 360, "soundfile")
-test.rotate
-test.play_sound_file
-test.on_click
 
 square = Square.new(1, 1, 360, "./square.aiff")
 square.on_click
