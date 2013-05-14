@@ -9,9 +9,9 @@
 require 'logger'
 
 module LogErrors
-$LOG = Logger.new('6W3E_TextAnalyzer.log')
-$LOG.level = Logger::ERROR
-
+  $LOG = Logger.new('6W3E_TextAnalyzer.log')
+  $LOG.level = Logger::ERROR
+  
   def log_result
     $LOG.error yield
   end
