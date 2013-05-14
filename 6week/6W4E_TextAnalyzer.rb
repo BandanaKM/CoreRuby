@@ -10,12 +10,13 @@
 class TextFile
   def initialize(file_name)
     raise ArgumentError, 'Argument is not a text file' unless file_name.filename.match(%r{.txt})
-		@file_name = file_name.filename
+    @file_name = file_name.filename
 
     @file_contents = file_name.readlines
     raise ArgumentError, 'Text file is empty' unless @file_contents.size != 0
-	end
+  end
 end
+
 
 class Display < TextFile
   def display_result(data)
@@ -25,15 +26,15 @@ end
 
 
 class Analyze < Display
-	def size
-		@lines = @file_contents.size
-		display_result(@lines) {"lines"}
-	end
-
-	def character_ct
-		@character_ct = @file_contents.join.length
-		display_result(@character_ct) {"characters"}
-	end
+  def size
+    @lines = @file_contents.size
+    display_result(@lines) {"lines"}
+  end
+  
+  def character_ct
+    @character_ct = @file_contents.join.length
+    display_result(@character_ct) {"characters"}
+  end
 
   def character_ct_no_spaces 
     @character_ct_no_spaces = @file_contents.join.gsub(/\s+/, "").length

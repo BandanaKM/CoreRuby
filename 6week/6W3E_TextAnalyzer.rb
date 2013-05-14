@@ -25,7 +25,7 @@ class TextFile
 
     @file_contents = file_name.readlines
     raise ArgumentError, 'Text file is empty' unless @file_contents.size != 0
-	end
+  end
 end
 
 
@@ -39,15 +39,15 @@ end
 class Analyze < Display
 include LogErrors
 
-	def size
-		@lines = @file_contents.size
-		log_result { display_result(@lines) {"lines"} }
-	end
+  def size
+    @lines = @file_contents.size
+    log_result { display_result(@lines) {"lines"} }
+  end
 
-	def character_ct
-		@character_ct = @file_contents.join.length
-		log_result { display_result(@character_ct) {"characters"} }
-	end
+  def character_ct
+    @character_ct = @file_contents.join.length
+    log_result { display_result(@character_ct) {"characters"} }
+  end
 
   def character_ct_no_spaces 
     @character_ct_no_spaces = @file_contents.join.gsub(/\s+/, "").length
