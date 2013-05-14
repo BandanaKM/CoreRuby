@@ -23,7 +23,6 @@ module Rotate
   def rotate_shape(rotation)
     "#{self.class} is rotating #{rotation}"
   end
-
 end
 
 class Shape
