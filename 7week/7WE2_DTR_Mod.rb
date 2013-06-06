@@ -17,7 +17,9 @@ m = DTRConvertor.new
 puts m.new_convert(100.0)
 
 #outputs contents of dtr.rb first - okay to modify
-=end
+
+
+TRY2
 
 require_relative 'dtr'
 
@@ -30,4 +32,17 @@ class NewDTR < DTRConvertor
 end
 
 m = NewDTR.new
+puts m.new_convert(100.0)
+=end
+
+require_relative 'dtr'
+
+class DTRConvertor
+  alias_method :new_convert, :convert
+  def new_convert(dollar_amount)
+    dollar_amount * 38.0
+  end
+end
+
+m = DTRConvertor.new
 puts m.new_convert(100.0)
